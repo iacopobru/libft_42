@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 00:18:08 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/10 01:24:00 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/10 11:15:31 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	run_test(int (*t_func)(), const char *t_name)
 {
 	if (!t_func())
-		printf(C_YELLOW "[TEST]" C_RESET " %s " C_GREEN "OK\n" C_RESET, t_name);
+		printf(C_YELLOW "[TEST]" "\e[1;37m" " %s " C_GREEN "OK\n" C_RESET, t_name);
 }
 
 void	perform_test(void)
@@ -38,4 +38,6 @@ void	perform_test(void)
 	run_test(test_ft_tolower, "ft_tolower");
 	run_test(test_ft_strchr, "ft_strchr");
 	run_test(test_ft_strrchr, "ft_strrchr");
+	run_test(test_ft_strncmp, "ft_strncmp");
+	run_test(test_ft_memchr, "ft_memchr");
 }

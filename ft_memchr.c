@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PROVE.c                                            :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/07 22:39:39 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/10 11:29:26 by ibrunial         ###   ########.fr       */
+/*   Created: 2024/12/10 10:46:51 by ibrunial          #+#    #+#             */
+/*   Updated: 2024/12/10 11:29:00 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "test_libft/test.h"
 
-
-int main()
+void	*ft_memchr(const void *src, int c, size_t n)
 {
-	perform_test();
+	unsigned char *c_src;
+	char uc_c;
+	size_t i;
+
+	if (n == 0)
+		return (NULL);
+	c_src = (unsigned char *)src;
+	uc_c = (unsigned char)c;
+	i = 0;
+	while (i < n && *c_src != uc_c)
+	{
+		c_src++;
+		i++;
+	}
+	if (*c_src == uc_c && i < n)
+		return ((void *)c_src);
+	return (NULL);
 }
