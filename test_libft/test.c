@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 00:18:08 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/10 11:15:31 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/10 17:11:05 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,6 @@ void	perform_test(void)
 	run_test(test_ft_strrchr, "ft_strrchr");
 	run_test(test_ft_strncmp, "ft_strncmp");
 	run_test(test_ft_memchr, "ft_memchr");
+	run_test(test_ft_memcmp, "ft_memcmp");
+	run_test(test_ft_strnstr, "ft_strnstr");
 }

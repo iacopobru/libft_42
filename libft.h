@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 22:40:21 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/10 15:23:12 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/10 17:04:11 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *scr, int c, size_t n);
-int	memcmp(const void *s1, const void *s2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 #endif

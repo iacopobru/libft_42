@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:27:05 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/10 15:30:53 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/10 17:17:54 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ int test_ft_memcmp()
 	{
 		int rd[2] = {rand() % LSTR_MAX, rand() % LSTR_MAX};
 		t_strlcpy(t_str[i], t_str[i + 1], rd[0]);
-		if (memcmp(t_str[i], t_str[i + 1], rd[1]) != ft_memcmp(t_str[i], t_str[i + 1], rd[1]))
+		int res[2] = {memcmp(t_str[i], t_str[i + 1], rd[1]), ft_memcmp(t_str[i], t_str[i + 1], rd[1])};
+		if ((res[0] ^ res[1]) < 0 || (!res[0] != !res[1]))
 		{
 			printf(C_RED "[ERROR] " C_RESET "ft_memcmp wrong return value (n = %d)\n", rd[1]);
 			printf("string tested s1: %s\n", t_str[i]);

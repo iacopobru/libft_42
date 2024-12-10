@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 11:22:42 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/09 14:34:34 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/10 17:19:32 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	test_ft_strlen()
 	{
 		if (ft_strlen(test_str[i]) != strlen(test_str[i]))
 		{
-			printf("[ERROR] ft_strlen return (value incorrect\n");
+			printf("[ERROR] ft_strlen return value incorrect\n");
 			printf("string:\n%s\n", test_str[i]);
 			printf("expected %ld, got %ld\n", strlen(test_str[i]),
 				ft_strlen(test_str[i]));
