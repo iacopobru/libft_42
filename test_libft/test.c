@@ -6,39 +6,36 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 00:18:08 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/09 14:40:43 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/10 01:24:00 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-void perform_test()
+static void	run_test(int (*t_func)(), const char *t_name)
+{
+	if (!t_func())
+		printf(C_YELLOW "[TEST]" C_RESET " %s " C_GREEN "OK\n" C_RESET, t_name);
+}
+
+void	perform_test(void)
 {
 	srand(time(NULL)); // imposto il seed per la generazione dei numeri casuali
-	//srand(42);
-	
-	if(!test_ft_isalpha())
-		printf("[TEST] ft_isalpha OK\n");
-	if(!test_ft_isdigit())
-		printf("[TEST] ft_isdigit OK\n");
-	if(!test_ft_isalnum())
-		printf("[TEST] ft_isalnum OK\n");
-	if(!test_ft_isascii())
-		printf("[TEST] ft_isascii OK\n");
-	if(!test_ft_isprint())
-		printf("[TEST] ft_isprint OK\n");
-	if(!test_ft_strlen())
-		printf("[TEST] ft_strlen OK\n");
-	if(!test_ft_memset())
-		printf("[TEST] ft_memset OK\n");
-	if(!test_ft_bzero())
-		printf("[TEST] ft_bzero OK\n");
-	if(!test_ft_memcpy())
-		printf("[TEST] ft_memcpy OK\n");
-	if(!test_ft_memmove())
-		printf("[TEST] ft_memmove OK\n");
-	if(!test_ft_strlcpy())
-		printf("[TEST] ft_strlcpy OK\n");
-	if(!test_ft_strlcat())
-		printf("[TEST] ft_strlcat OK\n");
+	// srand(42);
+	run_test(test_ft_isalpha, "ft_isalpha");
+	run_test(test_ft_isdigit, "ft_isdigit");
+	run_test(test_ft_isalnum, "ft_isalnum");
+	run_test(test_ft_isascii, "ft_isascii");
+	run_test(test_ft_isprint, "ft_isprint");
+	run_test(test_ft_strlen, "ft_strlen");
+	run_test(test_ft_memset, "ft_memset");
+	run_test(test_ft_bzero, "ft_bzero");
+	run_test(test_ft_memcpy, "ft_memcpy");
+	run_test(test_ft_memmove, "ft_memmove");
+	run_test(test_ft_strlcpy, "ft_strlcpy");
+	run_test(test_ft_strlcat, "ft_strlcat");
+	run_test(test_ft_toupper, "ft_toupper");
+	run_test(test_ft_tolower, "ft_tolower");
+	run_test(test_ft_strchr, "ft_strchr");
+	run_test(test_ft_strrchr, "ft_strrchr");
 }

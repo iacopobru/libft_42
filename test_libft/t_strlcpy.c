@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 21:44:29 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/08 22:09:44 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/10 00:23:37 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 int	test_ft_strlcpy(void)
 {
 	char **t_str = gen_test_string();
+	if (!t_str)
+		return (1);
 	size_t rd;
 	for (int i = 0; i < NSTR; i++)
 	{

@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 22:40:21 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/09 14:32:38 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/10 00:58:08 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t size);
 void	*ft_memmove(void *dest, const void *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+char	*ft_strchr(const char *str, int c);
+char	*ft_strrchr(const char *str, int c);
 
 #endif
