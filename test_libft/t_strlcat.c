@@ -6,11 +6,35 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 22:40:29 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/08 23:28:30 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/10 15:13:07 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
+
+static size_t	t_strlcat(char *dest, const char *src, size_t size)
+{
+	size_t dest_len = 0;
+	size_t src_len = 0;
+	size_t i;
+
+	while (dest[dest_len] != '\0' && dest_len < size)
+		dest_len++;
+	while (src[src_len] != '\0')
+		src_len++;
+	if (dest_len >= size)
+		return (size + src_len);
+	i = 0;
+	while (src[i] != '\0' && (dest_len + i) < (size - 1))
+	{
+		dest[dest_len + i] = src[i];
+		i++;
+	}
+	if ((dest_len + i) < size)
+		dest[dest_len + i] = '\0';
+
+	return (dest_len + src_len);
+}
 
 int test_ft_strlcat()
 {
@@ -36,7 +60,7 @@ int test_ft_strlcat()
 		strcpy(dest2, t_str[i]);
 		size = rand() % LSTR_MAX;
 		temp[0] = ft_strlcat(dest2, cp_t_str[i + 1], size);
-		temp[1] = strlcat(dest1, t_str[i + 1], size);
+		temp[1] = t_strlcat(dest1, t_str[i + 1], size);
 		if (temp[1] != temp[0])
 		{
 			printf("[ERROR] ft_strlcat wrong return value\n");

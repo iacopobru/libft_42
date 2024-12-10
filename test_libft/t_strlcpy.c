@@ -6,11 +6,29 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 21:44:29 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/10 00:23:37 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/10 15:14:03 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
+
+static size_t	t_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t	i;
+
+	if (size == 0)
+		return (ft_strlen(src));
+	i = 0;
+	while (i < size - 1 && src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	while (src[i] != '\0')
+		i++;
+	return (i);
+}
 
 int	test_ft_strlcpy(void)
 {
@@ -23,10 +41,10 @@ int	test_ft_strlcpy(void)
 		rd = rand() % LSTR_MAX;
 		char dest1[LSTR_MAX] = {0};
 		char dest2[LSTR_MAX] = {0};
-		if (strlcpy(dest1, t_str[i], rd) != ft_strlcpy(dest2, t_str[i], rd))
+		if (t_strlcpy(dest1, t_str[i], rd) != ft_strlcpy(dest2, t_str[i], rd))
 		{
 			printf("[ERROR] ft_strlcpy return (value incorrect. expected %zu got \
-				%zu\n", strlcpy(dest1, t_str[i], rd), ft_strlcpy(dest2, t_str[i],
+				%zu\n", t_strlcpy(dest1, t_str[i], rd), ft_strlcpy(dest2, t_str[i],
 					rd));
 			printf("strig tested: %s\n", t_str[i]);
 			printf("[EXIT THIS TEST]\n");

@@ -1,6 +1,6 @@
 MAKEFLAGS += --no-print-directory
-COMPPILER = cc
-FLAG = -Wall -Wextra -Werror -std=c99
+COMPPILER = gcc
+FLAG = -Wall -Wextra -Werror
 SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
 NAME = test_libft.a
