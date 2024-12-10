@@ -6,11 +6,16 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 16:34:45 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/10 17:21:36 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/10 18:52:40 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+///////////////////////////////////
+//RISCRIVILA!!
+///////////////////////////////////
+
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -22,11 +27,17 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *)big);
 	while (i < len && big[i] != '\0')
 	{
-		j = 0;
-		while (big[i] == little[j] && len > i++ && little[j] != '\0')
-			j++;
-		if (little[j] == '\0')
-			return ((char *)big + i - j);
+		if (big[i] == little[0])
+		{
+			j = 0;
+			while (i + j < len && big[i + j] == little[j] && little[j] != '\0')
+			{
+				j++;
+			}
+			if (little[j] == '\0')
+				return ((char *)big + i);
+		}
+		i++;
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 16:49:33 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/10 18:12:29 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/10 18:41:34 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,17 @@ int test_ft_strnstr()
 	{
 		int rd = rand() % LSTR_MAX;
 		little = (char *) malloc(sizeof(char) * rd + 1);
-		memset(little, 0, rd + 1);
-		size_t rd2 = strlen(t_str[i]);
-		if (rd2 != 0)
-			rd2 = rand() % (strlen(t_str[i]));
-		memcpy(little, t_str[i] + rd2, rd);
+		int len = strlen(t_str[i]);
+		int rd2 = 0;
+		int index = 0;
+		if (len != 0)
+			rd2 = rand() % (len);
+		while (index < rd && t_str[i][index + rd2] != '\0')
+		{
+			little[index] = t_str[i][index + rd2];
+			index++;
+		}
 		little[rd] = '\0';
-		printf("litte: %s\n", little);
-		printf("big: %s\n", t_str[i]);
 		rd = rand() % LSTR_MAX;
 		char *res[2] = {t_strnstr(t_str[i], little, rd), ft_strnstr(t_str[i], little, rd)};
 		if (res[0] != res[1])
