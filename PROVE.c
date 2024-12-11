@@ -6,13 +6,11 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 22:39:39 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/11 13:30:48 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/11 14:13:34 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "test_libft/test.h"
-
 
 int main()
 {
