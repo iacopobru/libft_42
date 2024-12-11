@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 00:17:02 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/11 13:42:55 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/11 14:25:41 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	unsigned char us_c;
-	
+	unsigned char	us_c;
+
 	us_c = (unsigned char)c;
 	while (*str != '\0' && *str != us_c)
 		str++;

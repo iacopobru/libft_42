@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:22:13 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/10 15:40:57 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/11 14:24:58 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *uc_s1;
-	unsigned char *uc_s2;
+	unsigned char	*uc_s1;
+	unsigned char	*uc_s2;
 
 	if (n == 0)
 		return (0);

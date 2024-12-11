@@ -6,21 +6,16 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 16:34:45 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/11 13:50:44 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/11 14:28:03 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-///////////////////////////////////
-//RISCRIVILA!!
-///////////////////////////////////
-
-
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (*little == '\0')
