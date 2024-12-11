@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 00:11:35 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/08 20:12:08 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/11 13:33:17 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 31 && c <= 126)
-		return (1);
-	return (0);
+	return (c > 31 && c <= 126);
 }

@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 00:49:19 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/10 01:10:53 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/11 13:51:10 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strrchr(const char *str, int c)
 	last = NULL;
 	while (*str != '\0')
 	{
-		if (*str == c)
+		if (*str == (char)c)
 			last = str;
 		str++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)str);
 	return ((char *)last);
 }
