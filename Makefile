@@ -8,7 +8,7 @@ NAME = libft.a
 $(NAME): $(OBJ)
 	@ar -rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@make clean
+#	@make clean
 
 all: $(NAME)
 

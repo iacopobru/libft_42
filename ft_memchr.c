@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 10:46:51 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/11 14:29:14 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:22:47 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *src, int c, size_t n)
 {
 	unsigned char	*c_src;
-	char			uc_c;
+	unsigned char	uc_c;
 	size_t			i;
 
 	if (n == 0)
