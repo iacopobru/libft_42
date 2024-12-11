@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PROVE.c                                            :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/07 22:39:39 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/11 11:43:00 by ibrunial         ###   ########.fr       */
+/*   Created: 2024/12/11 10:49:36 by ibrunial          #+#    #+#             */
+/*   Updated: 2024/12/11 11:26:08 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "test_libft/test.h"
 
-
-int main()
+int	ft_atoi(const char *str)
 {
-	perform_test();
-	printf("%d\n", ft_isprint(' ' - 1));
+	int sign = 1;
+	int result = 0;
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
+		str++;
+	if (*str == '+' || *str == '-')
+	{
+		if (*str == '-')
+			sign = -1;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		result = (result * 10) + (*str - '0');
+		str++;
+	}
+	return (result * sign);
 }

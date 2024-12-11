@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 23:18:34 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/10 18:03:17 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/11 11:09:59 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int		test_ft_strncmp(void);
 int		test_ft_memchr(void);
 int		test_ft_memcmp(void);
 int		test_ft_strnstr(void);
+int		test_ft_atoi(void);
 
 void	perform_test(void);
 
