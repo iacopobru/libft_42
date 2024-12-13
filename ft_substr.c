@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 16:19:32 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/12 16:48:00 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/13 15:21:45 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*dest;
 
 	len_sub = ft_strlen(s) - start;
+	if ((long long)ft_strlen(s) - start < 0)
+		return (ft_calloc(1,1));
 	if (len_sub > len)
 		len_sub = len;
 	dest = (char *)malloc(sizeof(char) * len_sub + 1);
@@ -31,5 +33,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int main()
 // {
-// 	printf("(%s)\n", ft_substr("lorem ipsum dolor sit amet", 0, 1000));
+// 	printf("(%s)\n", ft_substr(str, 42, 42000000););
 // }
