@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 09:09:10 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/12 15:23:13 by ibrunial         ###   ########.fr       */
+/*   Created: 2024/12/12 18:02:38 by ibrunial          #+#    #+#             */
+/*   Updated: 2024/12/13 08:33:20 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	while (n && *s1 && (*s1 == *s2))
+	char	*dest;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	dest = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	while (s1[i] != '\0')
 	{
-		++s1;
-		++s2;
-		--n;
+		dest[i] = s1[i];
+		i++;
 	}
-	if (n == 0)
+	while (s2[j] != '\0')
 	{
-		return (0);
+		dest[i] = s2[j];
+		i++;
+		j++;
 	}
-	else
-	{
-		return (*(unsigned char *)s1 - *(unsigned char *)s2);
-	}
+	dest[i] = '\0';
+	return (dest);
 }
+
+// int main()
+// {
+// 	printf("%s\n", ft_strjoin("prova", "prova2"));
+// }

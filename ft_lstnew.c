@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 09:09:10 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/12 15:23:13 by ibrunial         ###   ########.fr       */
+/*   Created: 2024/12/13 12:02:58 by ibrunial          #+#    #+#             */
+/*   Updated: 2024/12/13 12:54:32 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	while (n && *s1 && (*s1 == *s2))
-	{
-		++s1;
-		++s2;
-		--n;
-	}
-	if (n == 0)
-	{
-		return (0);
-	}
-	else
-	{
-		return (*(unsigned char *)s1 - *(unsigned char *)s2);
-	}
+	t_list	*new;
+
+	new = ft_calloc(1, sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
