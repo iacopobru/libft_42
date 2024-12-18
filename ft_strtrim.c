@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 08:33:56 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/13 15:34:00 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/16 13:44:32 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (*s1 && is_in_set(*s1, set))
 		s1++;
 	len = ft_strlen(s1);
-	if(len == 0)
-		return ((char *)ft_calloc(1,1));
+	if (len == 0)
+		return ((char *)ft_calloc(1, 1));
 	while (is_in_set(s1[len - 1], set))
 		len--;
 	dest = (char *)malloc(sizeof(char) * len + 1);

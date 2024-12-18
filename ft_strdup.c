@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:39:47 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/12 16:18:44 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/18 12:46:22 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_strdup(const char *str)
 	size_t	len;
 
 	len = ft_strlen(str) + 1;
-	dest = malloc(sizeof(char) * len);
+	dest = (char *)malloc(sizeof(char) * len);
+	if (!dest)
+		return (NULL);
 	while (len--)
 		dest[len] = str[len];
 	return (dest);

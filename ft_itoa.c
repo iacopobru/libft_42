@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 10:40:34 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/13 10:58:26 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/18 12:45:32 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char	*ft_itoa(int n)
 
 	len = byte_for_malloc(n);
 	dest = (char *)malloc(sizeof(char) * len + 1);
+	if (!dest)
+		return (NULL);
 	dest[len--] = '\0';
 	ll_n = (long long)n;
 	if (ll_n < 0)

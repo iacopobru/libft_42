@@ -6,7 +6,7 @@
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 09:09:10 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/12/12 15:23:13 by ibrunial         ###   ########.fr       */
+/*   Updated: 2024/12/18 12:47:05 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		--n;
 	}
 	if (n == 0)
-	{
 		return (0);
-	}
 	else
-	{
 		return (*(unsigned char *)s1 - *(unsigned char *)s2);
-	}
 }
